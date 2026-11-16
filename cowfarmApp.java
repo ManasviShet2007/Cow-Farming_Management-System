@@ -13,7 +13,7 @@ public class cowfarmApp {
     private static final String URL =
         "jdbc:mysql://localhost:3306/cow_farm_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
     private static final String USER = "root";
-    private static final String PASSWORD = "Mns.Shet13";
+    private static final String PASSWORD = System.getenv("DB_PASSWORD");
 
     private static final Scanner sc = new Scanner(System.in);
 

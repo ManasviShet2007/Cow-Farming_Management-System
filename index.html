@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <!DOCTYPE html>
 <html lang="en">
@@ -334,3 +335,473 @@
 <script src="script.js"></script>
 </body>
 </html>
+=======
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cow Farm Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>🐄 CowFarm</h2>
+
+    <nav>
+        <a class="active" href="#" onclick="showPage('dashboard',this)">Dashboard</a>
+        <a href="#" onclick="showPage('cows',this)">Cow Management</a>
+        <a href="#" onclick="showPage('breeding',this)">Breeding</a>
+        <a href="#" onclick="showPage('feeding',this)">Feeding</a>
+        <a href="#" onclick="showPage('expenses',this)">Expenses</a>
+        <a href="#" onclick="showPage('milk',this)">Milk Production</a>
+        <a href="#" onclick="showPage('sales',this)">Milk Sales</a>
+        <a href="#" onclick="showPage('health',this)">Health Records</a>
+        <a href="#" onclick="showPage('veterinarians',this)">Veterinarians</a>
+        <a href="#" onclick="showPage('reports',this)">Reports</a>
+    </nav>
+
+    <div class="sidebar-footer">Cow Farm Management</div>
+</div>
+
+<main class="main-content">
+
+    <header>
+        <div>
+            <h1 id="page-title">Dashboard</h1>
+            <p>Welcome to your Cow Farm Management System</p>
+        </div>
+        <div class="profile">Farm Administrator</div>
+    </header>
+
+    <!-- DASHBOARD -->
+
+<!-- DASHBOARD -->
+<section id="dashboard" class="page dashboard-page">
+
+    <div class="welcome-banner">
+        <div>
+            <span class="eyebrow">FARM MANAGEMENT OVERVIEW</span>
+            <h2>Welcome to CowFarm</h2>
+            <p>Your farm operations, production and livestock records — all in one place.</p>
+        </div>
+        <div class="welcome-icon">🐄</div>
+    </div>
+
+    <div class="section-heading">
+        <div>
+            <h2>Farm at a Glance</h2>
+            <p>Key statistics from your farm</p>
+        </div>
+        <span class="live-label"><span></span> Live overview</span>
+    </div>
+
+    <div class="cards">
+        <div class="card metric-card">
+            <div class="metric-top">
+                <span class="metric-icon green">🐄</span>
+                <span class="metric-label">LIVESTOCK</span>
+            </div>
+            <span class="metric-title">Total Cows</span>
+            <h2 id="totalCows">--</h2>
+            <p>Registered animals</p>
+        </div>
+
+        <div class="card metric-card">
+            <div class="metric-top">
+                <span class="metric-icon blue">🥛</span>
+                <span class="metric-label">PRODUCTION</span>
+            </div>
+            <span class="metric-title">Today's Milk</span>
+            <h2 id="todayMilk">-- L</h2>
+            <p>Daily milk output</p>
+        </div>
+
+        <div class="card metric-card">
+            <div class="metric-top">
+                <span class="metric-icon purple">✓</span>
+                <span class="metric-label">ACTIVE</span>
+            </div>
+            <span class="metric-title">Active Cows</span>
+            <h2 id="activeCows">--</h2>
+            <p>Currently registered</p>
+        </div>
+
+        <div class="card metric-card">
+            <div class="metric-top">
+                <span class="metric-icon orange">✚</span>
+                <span class="metric-label">HEALTH</span>
+            </div>
+            <span class="metric-title">Health Records</span>
+            <h2 id="healthCount">--</h2>
+            <p>Recorded health entries</p>
+        </div>
+    </div>
+
+    <div class="dashboard-grid">
+
+        <div class="panel overview-panel">
+            <div class="panel-heading">
+                <div>
+                    <h2>Farm Operations</h2>
+                    <p>Manage your daily farm activities</p>
+                </div>
+                <span class="panel-icon">📊</span>
+            </div>
+
+            <div class="operation-grid">
+                <a href="#" onclick="showPage('cows',this)" class="operation-item">
+                    <span>🐄</span>
+                    <div><strong>Cow Management</strong><small>Livestock records</small></div>
+                    <b>›</b>
+                </a>
+
+                <a href="#" onclick="showPage('milk',this)" class="operation-item">
+                    <span>🥛</span>
+                    <div><strong>Milk Production</strong><small>Daily production</small></div>
+                    <b>›</b>
+                </a>
+
+                <a href="#" onclick="showPage('feeding',this)" class="operation-item">
+                    <span>🌾</span>
+                    <div><strong>Feeding</strong><small>Feed management</small></div>
+                    <b>›</b>
+                </a>
+
+                <a href="#" onclick="showPage('health',this)" class="operation-item">
+                    <span>🩺</span>
+                    <div><strong>Health Records</strong><small>Animal healthcare</small></div>
+                    <b>›</b>
+                </a>
+
+                <a href="#" onclick="showPage('breeding',this)" class="operation-item">
+                    <span>🐮</span>
+                    <div><strong>Breeding</strong><small>Breeding records</small></div>
+                    <b>›</b>
+                </a>
+
+                <a href="#" onclick="showPage('sales',this)" class="operation-item">
+                    <span>💰</span>
+                    <div><strong>Milk Sales</strong><small>Customer transactions</small></div>
+                    <b>›</b>
+                </a>
+            </div>
+        </div>
+
+        <div class="panel info-panel">
+            <div class="panel-heading">
+                <div>
+                    <h2>Management Centre</h2>
+                    <p>Additional farm resources</p>
+                </div>
+                <span class="panel-icon">⚙️</span>
+            </div>
+
+            <a href="#" onclick="showPage('expenses',this)" class="management-link">
+                <span class="management-icon">💳</span>
+                <div><strong>Farm Expenses</strong><small>Monitor expenditure</small></div>
+                <b>›</b>
+            </a>
+
+            <a href="#" onclick="showPage('veterinarians',this)" class="management-link">
+                <span class="management-icon">👨‍⚕️</span>
+                <div><strong>Veterinarians</strong><small>Manage veterinary contacts</small></div>
+                <b>›</b>
+            </a>
+
+            <a href="#" onclick="showPage('reports',this)" class="management-link">
+                <span class="management-icon">📈</span>
+                <div><strong>Farm Reports</strong><small>View farm summaries</small></div>
+                <b>›</b>
+            </a>
+
+            <div class="system-note">
+                <span>●</span>
+                <div>
+                    <strong>Farm Management System</strong>
+                    <p>Centralised livestock and farm operations</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="dashboard-footer">
+        <span>🐄 CowFarm Management System</span>
+        <span>Livestock · Production · Operations</span>
+    </div>
+
+</section>
+
+    <!-- COW MANAGEMENT -->
+    <section id="cows" class="page hidden">
+        <div class="panel">
+        <h2>Cow Management</h2>
+        <p>Register and manage your farm cows.</p>
+
+        <h3>Register New Cow</h3>
+
+        <form id="cowForm">
+            <input type="hidden" id="cowId">
+
+            <input type="text" id="cowName"
+                placeholder="Cow Name" required>
+
+            <input type="text" id="cowBreed"
+                placeholder="Breed" required>
+
+            <input type="number" id="cowAge"
+                placeholder="Age" min="0" required>
+
+            <select id="cowGender" required>
+                <option value="">Select Gender</option>
+                <option value="Female">Female</option>
+                <option value="Male">Male</option>
+            </select>
+
+            <input type="number" id="cowWeight"
+                placeholder="Weight (kg)" min="0" step="0.01" required>
+
+            <input type="date" id="cowDate" required>
+
+            <select id="cowHealth" required>
+                <option value="">Select Health Status</option>
+                <option value="Healthy">Healthy</option>
+                <option value="Sick">Sick</option>
+                <option value="Pregnant">Pregnant</option>
+                <option value="Under Treatment">Under Treatment</option>
+            </select>
+
+            <button type="submit">Save Cow</button>
+            <button type="button" onclick="resetCowForm()">Clear</button>
+        </form>
+
+        <hr>
+
+        <h3>Registered Cows</h3>
+        <button onclick="loadCows()">Refresh Cow Records</button>
+        <div id="cowList">Loading cow records...</div>
+    </div>
+</section>
+
+    <!-- BREEDING -->
+    <section id="breeding" class="page hidden">
+        <div class="panel">
+            <h2>Breeding Management</h2>
+            <p>Manage breeding dates, pregnancy status and expected delivery dates.</p>
+            <button onclick="loadBreeding()">Refresh Records</button>
+            <div id="breedingList">Breeding records will appear here.</div>
+        </div>
+    </section>
+
+    <!-- FEEDING -->
+   
+<section id="feeding" class="page hidden">
+    <div class="panel">
+        <h2>Feeding Management</h2>
+        <p>Monitor cow feed types, quantities and feeding costs.</p>
+
+        <form id="feedingForm">
+
+            <input type="hidden" id="feedId">
+
+            <label>Cow</label>
+            <select id="feedCowId" required>
+                <option value="">Select Cow</option>
+            </select>
+
+            <label>Feed Type</label>
+            <input type="text" id="feedType"
+                   placeholder="Example: Green Fodder" required>
+
+            <label>Quantity (kg)</label>
+            <input type="number" id="feedQtyKg"
+                   step="0.01" min="0.01" required>
+
+            <label>Feeding Date</label>
+            <input type="date" id="feedingDate" required>
+
+            <label>Feed Cost (₹)</label>
+            <input type="number" id="feedCost"
+                   step="0.01" min="0" required>
+
+            <button type="submit">Save Feeding Record</button>
+            <button type="button" onclick="resetFeedingForm()">
+                Clear
+            </button>
+
+        </form>
+
+        <hr>
+
+        <button onclick="loadFeeding()">Refresh Records</button>
+
+        <div id="feedingList">
+            Feeding records will appear here.
+        </div>
+    </div>
+</section>
+
+
+    
+   <!-- EXPENSES -->
+<section id="expenses" class="page hidden">
+    <div class="panel">
+        <h2>Farm Expenses</h2>
+        <p>Track farm expenses and expenditure categories.</p>
+
+        <h3>Add / Update Expense</h3>
+
+        <form id="expenseForm">
+            <input type="hidden" id="expenseId">
+
+            <select id="expenseCategory" required>
+                <option value="">Select Category</option>
+                <option value="Feed">Feed</option>
+                <option value="Medicine">Medicine</option>
+                <option value="Labour">Labour</option>
+                <option value="Electricity">Electricity</option>
+                <option value="Maintenance">Maintenance</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <input type="text" id="expenseDescription"
+                placeholder="Description" required>
+
+            <input type="date" id="expenseDate" required>
+
+            <input type="number" id="expenseAmount"
+                placeholder="Amount (₹)" min="0.01" step="0.01" required>
+
+            <button type="submit">Save Expense</button>
+            <button type="button" onclick="resetExpenseForm()">Clear</button>
+        </form>
+
+        <hr>
+
+        <h3>Expense Records</h3>
+        <button onclick="loadExpenses()">Refresh Records</button>
+        <div id="expenseList">Expense records will appear here.</div>
+    </div>
+</section>
+
+  
+   <!-- MILK PRODUCTION -->
+<section id="milk" class="page hidden">
+    <div class="panel">
+        <h2>Milk Production</h2>
+        <p>Monitor daily morning and evening milk production.</p>
+
+        <h3>Add / Update Milk Production</h3>
+
+        <form id="milkForm">
+            <input type="hidden" id="productionId">
+
+            <input type="number" id="milkCowId"
+                placeholder="Cow ID" min="1" required>
+
+            <input type="date" id="milkDate" required>
+
+            <input type="number" id="morningQty"
+                placeholder="Morning Quantity (Litres)"
+                min="0" step="0.01" required>
+
+            <input type="number" id="eveningQty"
+                placeholder="Evening Quantity (Litres)"
+                min="0" step="0.01" required>
+
+            <button type="submit">Save Milk Record</button>
+            <button type="button" onclick="resetMilkForm()">Clear</button>
+        </form>
+
+        <hr>
+
+        <h3>Milk Production Records</h3>
+        <button onclick="loadMilk()">Refresh Records</button>
+        <div id="milkList">Loading milk records...</div>
+    </div>
+</section>
+
+    <!-- MILK SALES -->
+    <section id="sales" class="page hidden">
+        <div class="panel">
+            <h2>Milk Sales</h2>
+            <p>Manage customer details, milk quantities and sales amounts.</p>
+            <button onclick="loadSales()">Refresh Records</button>
+            <div id="salesList">Sales records will appear here.</div>
+        </div>
+    </section>
+
+    <!-- HEALTH -->
+    
+<section id="health" class="page hidden">
+    <div class="panel">
+        <h2>Health Records</h2>
+        <p>Manage cow diseases, treatments and vaccination details.</p>
+
+        <form id="healthForm">
+            <input type="hidden" id="recordId">
+
+            <label>Cow</label>
+            <select id="healthCowId" required>
+                <option value="">Select Cow</option>
+            </select>
+
+            <label>Veterinarian</label>
+            <select id="healthVetId" required>
+                <option value="">Select Veterinarian</option>
+            </select>
+
+            <label>Disease Details</label>
+            <input type="text" id="diseaseDetails"
+                   maxlength="150" required>
+
+            <label>Treatment</label>
+            <input type="text" id="treatment"
+                   maxlength="150" required>
+
+            <label>Vaccination Date</label>
+            <input type="date" id="vaccinationDate">
+
+            <label>Record Date</label>
+            <input type="date" id="recordDate" required>
+
+            <button type="submit">Save Health Record</button>
+            <button type="button" onclick="resetHealthForm()">Clear</button>
+        </form>
+
+        <hr>
+        <button onclick="loadHealth()">Refresh Records</button>
+        <div id="healthList">Health records will appear here.</div>
+    </div>
+</section>
+
+
+    <!-- VETERINARIANS -->
+    <section id="veterinarians" class="page hidden">
+        <div class="panel">
+            <h2>Veterinarian Management</h2>
+            <p>Manage veterinarian names, phone numbers and clinics.</p>
+            <button onclick="loadVeterinarians()">Refresh Records</button>
+            <div id="vetList">Veterinarian records will appear here.</div>
+        </div>
+    </section>
+
+    <!-- REPORTS -->
+    <section id="reports" class="page hidden">
+        <div class="panel">
+            <h2>Farm Reports</h2>
+            <p>View production, sales, expenses and farm activity reports.</p>
+            <button onclick="loadReports()">Refresh Reports</button>
+            <div id="reportList">Reports will appear here.</div>
+        </div>
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
+>>>>>>> 2e26975 (Update Cow Farm Management System)
